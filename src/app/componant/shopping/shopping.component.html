@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-2">
+      <app-filter></app-filter>
+    </div>
+  
+    <div class="col-md-8">
+
+      <div><b>"Make It Matter...! Make It Reinventing...!"</b></div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide><img src="../../assets/Pl1.jpg" ></ng-template>  
+    <ng-template carouselSlide><img src="../../assets/pl2.jpg"></ng-template>  
+    <ng-template carouselSlide><img src="../../assets/pl3.jpg"></ng-template>  
+  </owl-carousel-o>
+  
+  
+      <app-product></app-product>
+    </div>
+  
+   <div class="col">
+    
+<!-- <a class="btn btn-secondary" routerLink="/cart"><img src="../../assets/cartlogo.png" height="30" width="30">  Cart</a> 
+--><app-cart></app-cart>
+    </div>
+  </div>
+  
+
