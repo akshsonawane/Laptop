@@ -25,6 +25,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { MarqueeComponent } from './componant/marquee/marquee.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { MarqueeComponent } from './componant/marquee/marquee.component';
     CheckoutComponent,
     PaymentComponent,
     ThanksComponent,
-    MarqueeComponent
+    MarqueeComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

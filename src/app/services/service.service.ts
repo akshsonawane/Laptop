@@ -1,16 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {User} from 'src/app/models/user';
-import {ApiResponse} from 'src/app/models/api-response';
+
+
+const api= "http://localhost/Anglap/"
+
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
-  constructor(private http:HttpClient) { }
   
-  createUser(user:User):Observable<ApiResponse> {
-    return this.http.post<ApiResponse>("http://localhost:5555/userdata/",user)
+
+  constructor(private http:HttpClient) { }
+
+  saveData(data)
+  {
+    return this.http.post(api + 'adduser.php',data);
   }
+
+getData()
+{
+   return this.http.get(api+'getuser.php')
+}
+ 
 }

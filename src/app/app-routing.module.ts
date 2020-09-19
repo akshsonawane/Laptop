@@ -9,6 +9,8 @@ import { ViewComponent } from './view/view.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { AdminComponent } from './admin/admin.component';
+
 
 const routes: Routes = [
    
@@ -53,6 +55,16 @@ const routes: Routes = [
 {
   path:'thanks',
   component:ThanksComponent
+},
+
+{
+  path:'admin',
+  component:AdminComponent
+},
+
+{
+  path:'view',
+  component:ViewComponent
 }
 
 ];

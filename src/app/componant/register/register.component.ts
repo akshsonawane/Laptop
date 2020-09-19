@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup
 
-  constructor(private apiService:ServiceService,private router:Router) { }
+  constructor(private userservice:ServiceService,private router:Router) { }
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -51,10 +51,13 @@ export class RegisterComponent implements OnInit {
   {
     console.log(this.registerForm.value)
 
-    this.apiService.createUser(this.registerForm .value)
-    .subscribe( data => {
-      this.router.navigate(['view']);
-    });
+    this.userservice.saveData(this.registerForm.value).subscribe((res)=>{
+      console.log("data added",res)
+      alert("user Registerd sucessfully")
+      this.router.navigateByUrl("/login")
+    })
+
+  
 
 
   }

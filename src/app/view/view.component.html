@@ -1,1 +1,30 @@
-<p>You Have Registered Sucessfully...!</p>
+<div class='jumbotron'>
+    <table class="bg-muted table table-bordered table-striped table-hover">
+    <thead>
+        <tr> 
+            <th style="text-align: center;background-color: gray;color:white"
+             colspan="7">User Details</th>
+        </tr>
+        <tr>
+            <th>Name </th>
+            <th> Username</th>
+            <th> Email</th>
+            <th> Mobile</th>
+            <th> Password</th>
+            <th>Edit</th>
+            <th> Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let s of user">
+            <td>{{name}}</td>
+            <td>{{username}}</td>
+            <td>{{email}}</td>
+            <td>{{Mobile}}</td>
+            <td>{{Password}}</td>
+            <td><a class="btn btn-info" href="#">Edit Data</a></td>
+            <td><a class="btn btn-danger" href="#">Delete Data</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
